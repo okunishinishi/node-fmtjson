@@ -19,7 +19,7 @@ module.exports = apeTmpl.readmeMdBud({
         npm: true
     },
     overview: 'doc/overview.md',
-    links: require('./doc/links'),
+    //links: require('./doc/links'),
     vars: {}
 });
 

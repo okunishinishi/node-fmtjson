@@ -104,11 +104,3 @@ This software is released under the [MIT License](https://github.com/okunishinis
 <!-- LICENSE End -->
 
 
-<!-- Links Start -->
-<a name="links"></a>
-
-Links
-------
-
-
-<!-- Links End -->
