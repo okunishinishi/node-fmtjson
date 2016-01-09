@@ -6,10 +6,10 @@
 
 "use strict";
 
-var fmtjson = require('./fmtjson'),
+const fmtjson = require('./fmtjson'),
     pkg = require('../package.json');
 
-var lib = fmtjson.bind(this);
+let lib = fmtjson.bind(this);
 lib.version = pkg.version;
 
 module.exports = lib;

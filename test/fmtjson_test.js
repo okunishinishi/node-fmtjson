@@ -1,32 +1,36 @@
 /**
  * Test case for fmtjson.
- * Runs with nodeunit.
+ * Runs with mocha.
  */
+"use strict";
 
-var fmtjson = require('../lib/fmtjson.js'),
+const fmtjson = require('../lib/fmtjson.js'),
     fs = require('fs'),
+    assert = require('assert'),
     mkdirp = require('mkdirp');
 
-var tmpDir = __dirname + '/../tmp';
 
-exports.setUp = function (done) {
-    mkdirp.sync(tmpDir);
-    done();
-};
-
-exports.tearDown = function (done) {
-    done();
-};
-
-exports['Fmtjson'] = function (test) {
-    var filename = tmpDir + '/testing-json.json';
-    fs.writeFileSync(filename, '{"foo":"bar"}');
-    fmtjson(tmpDir + '/*.json', {
-        sort: true,
-        indent: 4
-    }, function (err) {
-        test.ifError(err);
-        test.done();
+describe('fmtjson', () => {
+    let tmpDir = __dirname + '/../tmp';
+    before((done) => {
+        mkdirp.sync(tmpDir);
+        done();
     });
-};
+
+    after((done) => {
+        done();
+    });
+
+    it('Fmtjson', (done) => {
+        let filename = tmpDir + '/testing-json.json';
+        fs.writeFileSync(filename, '{"foo":"bar"}');
+        fmtjson(tmpDir + '/*.json', {
+            sort: true,
+            indent: 4
+        }, (err) => {
+            assert.ifError(err);
+            done();
+        });
+    });
+});
 

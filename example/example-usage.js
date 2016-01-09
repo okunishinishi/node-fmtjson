@@ -1,9 +1,11 @@
-var fmtjson = require('fmtjson');
+"use strict";
+
+const fmtjson = require('fmtjson');
 
 fmtjson([
     'src/**/*.json'
 ], {
     sort: true
-}, function (err, results) {
+}, (err, results) => {
     /*...*/
 });
