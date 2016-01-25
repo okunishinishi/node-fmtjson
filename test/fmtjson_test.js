@@ -44,5 +44,17 @@ describe('fmtjson', () => {
             done();
         });
     });
+
+    it('Fmt string array', (done) => {
+        let filename = tmpDir + '/testing-string-array-json.json';
+        fs.writeFileSync(filename, '["fuge", "foge", "aaa"]');
+        fmtjson(tmpDir + '/*.json', {
+            sort: true,
+            indent: 2
+        }, (err) => {
+            assert.ifError(err);
+            done();
+        });
+    });
 });
 
