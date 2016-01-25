@@ -1,6 +1,6 @@
 {
   "name": "fmtjson",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Format json files.",
   "main": "lib",
   "scripts": {
