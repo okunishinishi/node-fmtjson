@@ -26,7 +26,19 @@ describe('fmtjson', () => {
         fs.writeFileSync(filename, '{"foo":"bar"}');
         fmtjson(tmpDir + '/*.json', {
             sort: true,
-            indent: 4
+            indent: 2
+        }, (err) => {
+            assert.ifError(err);
+            done();
+        });
+    });
+
+    it('Fmt array', (done) => {
+        let filename = tmpDir + '/testing-array-json.json';
+        fs.writeFileSync(filename, '[{"foo":"bar"}]');
+        fmtjson(tmpDir + '/*.json', {
+            sort: true,
+            indent: 2
         }, (err) => {
             assert.ifError(err);
             done();
