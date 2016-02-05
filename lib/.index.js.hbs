@@ -11,5 +11,8 @@ const fmtjson = require('./fmtjson'),
 
 let lib = fmtjson.bind(this);
 lib.version = pkg.version;
+{{#each sub}}
+lib.{{this}} = fmtjson.{{this}};
+{{/each}}
 
 module.exports = lib;

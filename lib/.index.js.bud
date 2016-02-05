@@ -4,16 +4,18 @@
 
 "use strict";
 
-const pkg = require('../package.json');
+const pkg = require('../package.json'),
+    fmtjson = require('./fmtjson');
 
 module.exports = {
-    force:true,
-    mode:'444',
-    data:{
-        pkg:pkg
+    force: true,
+    mode: '444',
+    data: {
+        pkg: pkg,
+        sub: Object.keys(fmtjson)
     }
 };
 
-if(!module.parent){
+if (!module.parent) {
     require('coz').render(__filename);
 }
