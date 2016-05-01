@@ -2,20 +2,20 @@
  * Bud file for index.js
  */
 
-"use strict";
+'use strict'
 
-const pkg = require('../package.json'),
-    fmtjson = require('./fmtjson');
+const pkg = require('../package.json')
+const fmtjson = require('./fmtjson')
 
 module.exports = {
-    force: true,
-    mode: '444',
-    data: {
-        pkg: pkg,
-        sub: Object.keys(fmtjson)
-    }
+  force: true,
+  mode: '444',
+  data: {
+    pkg: pkg,
+    sub: Object.keys(fmtjson)
+  }
 };
 
 if (!module.parent) {
-    require('coz').render(__filename);
+  require('coz').render(__filename)
 }

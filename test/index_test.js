@@ -3,14 +3,16 @@
  * Runs with mocha.
  */
 
-"use strict";
+'use strict'
 
-const index = require('../lib/index.js'),
-    assert = require('assert');
+const index = require('../lib/index.js')
+const assert = require('assert')
 
 describe('index', () => {
-    it('Eval properties.', (done) => {
-        assert.ok(index);
-        done();
-    });
-});
+  it('Eval properties.', (done) => {
+    assert.ok(index)
+    done()
+  })
+})
+
+/* global describe, before, after, it */

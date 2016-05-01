@@ -4,15 +4,15 @@
  * @version {{pkg.version}}
  */
 
-"use strict";
+'use strict'
 
-const fmtjson = require('./fmtjson'),
-    pkg = require('../package.json');
+const fmtjson = require('./fmtjson')
+const pkg = require('../package.json')
 
-let lib = fmtjson.bind(this);
-lib.version = pkg.version;
+let lib = fmtjson.bind(this)
+lib.version = pkg.version
 {{#each sub}}
-lib.{{this}} = fmtjson.{{this}};
+lib.{{this}} = fmtjson.{{this}}
 {{/each}}
 
-module.exports = lib;
+module.exports = lib

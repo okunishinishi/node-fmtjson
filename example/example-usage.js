@@ -1,11 +1,11 @@
-"use strict";
+'use strict'
 
-const fmtjson = require('fmtjson');
+const fmtjson = require('fmtjson')
 
 fmtjson([
-    'src/**/*.json'
+  'src/**/*.json'
 ], {
-    sort: true
-}, (err, results) => {
-    /*...*/
-});
+  sort: true
+}).then(() => {
+  /* ... */
+})
