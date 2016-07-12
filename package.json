@@ -1,6 +1,6 @@
 {
   "name": "fmtjson",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Format json files.",
   "main": "lib",
   "scripts": {
@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/okunishinishi/node-fmtjson#readme",
   "dependencies": {
+    "aglob": "^1.0.1",
     "argx": "^2.0.2",
+    "asfs": "^1.0.5",
     "co": "^4.6.0",
-    "expandglob": "^3.0.2",
-    "mkdirp": "^0.5.1",
     "writeout": "^2.0.2"
   },
   "devDependencies": {
