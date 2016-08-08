@@ -55,6 +55,7 @@ Format json files.
 <!-- Section from "doc/guides/01.Installation.md.hbs" Start -->
 
 <a name="section-doc-guides-01-installation-md"></a>
+
 Installation
 -----
 
@@ -68,6 +69,7 @@ $ npm install fmtjson --save
 <!-- Section from "doc/guides/02.Usage.md.hbs" Start -->
 
 <a name="section-doc-guides-02-usage-md"></a>
+
 Usage
 ---------
 
@@ -93,6 +95,7 @@ fmtjson([
 <!-- Section from "doc/guides/03.Options.md.hbs" Start -->
 
 <a name="section-doc-guides-03-options-md"></a>
+
 Options
 -------
 

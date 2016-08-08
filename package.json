@@ -1,10 +1,15 @@
 {
   "name": "fmtjson",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Format json files.",
   "main": "lib",
+  "browser": {
+    "fmtjson": false,
+    "fmtjson/sort_properties": "shim/browser/sort_properties"
+  },
   "scripts": {
-    "test": "./ci/test.js"
+    "test": "./ci/test.js",
+    "prepublish": "./ci/build.js && ./ci/browser.js"
   },
   "repository": "okunishinishi/node-fmtjson",
   "keywords": [
@@ -23,21 +28,22 @@
   },
   "homepage": "https://github.com/okunishinishi/node-fmtjson#readme",
   "dependencies": {
-    "aglob": "^1.0.1",
-    "argx": "^2.0.2",
+    "aglob": "^1.0.2",
+    "argx": "^3.0.1",
     "asfs": "^1.0.5",
     "co": "^4.6.0",
-    "writeout": "^2.0.6"
+    "writeout": "^2.0.7"
   },
   "devDependencies": {
-    "ape-covering": "^3.0.3",
-    "ape-releasing": "^4.0.1",
-    "ape-reporting": "^3.0.1",
-    "ape-tasking": "^4.0.3",
-    "ape-testing": "^4.0.1",
-    "ape-tmpl": "^5.0.12",
-    "ape-updating": "^4.0.4",
-    "coz": "^6.0.5",
+    "ababel": "^1.0.25",
+    "ababel-es2015": "^1.0.5",
+    "amocha": "^1.0.13",
+    "ape-releasing": "^4.0.4",
+    "ape-reporting": "^3.0.2",
+    "ape-tasking": "^4.0.8",
+    "ape-tmpl": "^5.0.15",
+    "ape-updating": "^4.0.5",
+    "coz": "^6.0.17",
     "injectmock": "^2.0.0",
     "sharegit": "^1.0.4"
   },

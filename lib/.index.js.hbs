@@ -7,10 +7,8 @@
 'use strict'
 
 const fmtjson = require('./fmtjson')
-const pkg = require('../package.json')
 
 let lib = fmtjson.bind(this)
-lib.version = pkg.version
 {{#each sub}}
 lib.{{this}} = fmtjson.{{this}}
 {{/each}}
