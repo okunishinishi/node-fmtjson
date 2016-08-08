@@ -4,8 +4,7 @@
   "description": "Format json files.",
   "main": "lib",
   "browser": {
-    "fmtjson": false,
-    "fmtjson/sort_properties": "shim/browser/sort_properties"
+    "./sort_properties": "shim/browser/sort_properties"
   },
   "scripts": {
     "test": "./ci/test.js",
