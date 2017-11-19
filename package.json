@@ -1,6 +1,6 @@
 {
   "name": "fmtjson",
-  "version": "3.0.8",
+  "version": "4.0.1",
   "description": "Format json files.",
   "main": "lib",
   "browser": {
@@ -27,20 +27,19 @@
   },
   "homepage": "https://github.com/okunishinishi/node-fmtjson#readme",
   "dependencies": {
-    "aglob": "^1.0.2",
+    "aglob": "^3.0.0",
     "argx": "^3.0.1",
-    "asfs": "^1.0.5",
-    "co": "^4.6.0",
+    "asfs": "^2.0.1",
     "writeout": "^2.0.7"
   },
   "devDependencies": {
-    "ababel": "^1.1.2",
-    "ababel-es2015": "^1.0.6",
-    "amocha": "^1.0.14",
+    "ababel": "^2.0.3",
+    "ababel-es2015": "^2.0.2",
+    "amocha": "^4.0.0",
     "ape-releasing": "^4.0.4",
     "ape-reporting": "^3.0.2",
     "ape-tasking": "^4.0.8",
-    "ape-tmpl": "^5.0.15",
+    "ape-tmpl": "^6.0.2",
     "ape-updating": "^4.0.5",
     "coz": "^6.0.17",
     "injectmock": "^2.0.0",

@@ -8,43 +8,42 @@ const fmtjson = require('../lib/fmtjson.js')
 const fs = require('fs')
 const assert = require('assert')
 const mkdirp = require('mkdirp')
-const co = require('co')
 
 describe('fmtjson', () => {
   let tmpDir = __dirname + '/../tmp'
-  before(() => co(function * () {
+  before(async () => {
     mkdirp.sync(tmpDir)
-  }))
+  })
 
-  after(() => co(function * () {
-  }))
+  after(async () => {
+  })
 
-  it('Fmtjson', () => co(function * () {
+  it('Fmtjson', async () => {
     let filename = tmpDir + '/testing-json.json'
     fs.writeFileSync(filename, '{"foo":"bar"}')
-    yield fmtjson(tmpDir + '/*.json', {
+    await fmtjson(tmpDir + '/*.json', {
       sort: true,
       indent: 2
     })
-  }))
+  })
 
-  it('Fmt array', () => co(function * () {
+  it('Fmt array', async () => {
     let filename = tmpDir + '/testing-array-json.json'
     fs.writeFileSync(filename, '[{"foo":"bar"}]')
-    yield fmtjson(tmpDir + '/*.json', {
+    await fmtjson(tmpDir + '/*.json', {
       sort: true,
       indent: 2
     })
-  }))
+  })
 
-  it('Fmt string array', () => co(function * () {
+  it('Fmt string array', async () => {
     let filename = tmpDir + '/testing-string-array-json.json'
     fs.writeFileSync(filename, '["fuge", "foge", "aaa"]')
-    yield fmtjson(tmpDir + '/*.json', {
+    await fmtjson(tmpDir + '/*.json', {
       sort: true,
       indent: 2
     })
-  }))
+  })
 })
 
 /* global describe, before, after, it */
