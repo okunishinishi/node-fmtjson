@@ -9,10 +9,10 @@
 process.chdir(`${__dirname}/..`)
 
 const apeTasking = require('ape-tasking')
-const ababelEs2015 = require('ababel-es2015')
+const ababel = require('ababel')
 
 apeTasking.runTasks('browser', [
-  () => ababelEs2015('**/*.js', {
+  () => ababel('**/*.js', {
     cwd: 'lib',
     out: 'shim/browser'
   })
