@@ -1,6 +1,6 @@
 {
   "name": "fmtjson",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "Format json files.",
   "main": "lib",
   "browser": {
@@ -33,15 +33,15 @@
     "writeout": "^2.2.4"
   },
   "devDependencies": {
-    "ababel": "^5.0.11",
+    "ababel": "^5.0.12",
     "ababel-es2015": "^2.0.2",
-    "amocha": "^5.0.1",
+    "amocha": "^5.0.2",
     "ape-releasing": "^5.0.7",
     "ape-reporting": "^3.0.2",
     "ape-tasking": "^4.0.12",
     "ape-tmpl": "^6.0.14",
     "ape-updating": "^5.0.3",
-    "coz": "^7.0.17",
+    "coz": "^7.0.19",
     "injectmock": "^2.0.0",
     "sharegit": "^1.0.4"
   },
